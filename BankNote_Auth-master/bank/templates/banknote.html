@@ -1,0 +1,14 @@
+<p>If the value is -ve please write '-' sign</p>
+<form action="" method="post">
+{% csrf_token %}
+varience: <input type="text" name="varience" id=""> <br>
+skewness: <input type="text" name="skewness" id=""> <br>
+curtosis: <input type="text" name="curtosis" id=""> <br>
+entropy: <input type="text" name="entropy" id=""> <br>
+
+<input type="submit" value="Check">
+</form>
+
+{% if response %}
+Answer: {{ response }}
+{% endif %}
